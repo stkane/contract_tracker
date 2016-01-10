@@ -1,0 +1,26 @@
+<h1>All Contracts</h1>
+ 
+<%= link_to 'Create New Contract', new_contract_path %>
+
+<table>
+  <tr>
+    <th>Client</th>
+    <th>Opportunity Link</th>
+    <th>Contract Start Date</th>
+    <th>Contract End Date</th>
+  </tr>
+ 
+  <% @contracts.each do |contract| %>
+    <tr>
+      <td><%= contract.client %></td>
+      <td><%= contract.opportunity_link %></td>
+      <td><%= contract.contract_start %></td>
+      <td><%= contract.contract_end %></td>
+      <td><%= link_to 'Show', contract_path(contract) %></td>
+      <td><%= link_to 'Edit', edit_contract_path(contract) %></td>
+      <td><%= link_to 'Destroy', contract_path(contract),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>

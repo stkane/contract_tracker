@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  client: MyString
+  opportunity_link: MyString
+  contract_start: 2016-01-07
+  contract_end: 2016-01-07
+
+two:
+  client: MyString
+  opportunity_link: MyString
+  contract_start: 2016-01-07
+  contract_end: 2016-01-07

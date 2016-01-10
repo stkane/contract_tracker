@@ -1,0 +1,12 @@
+<p>
+  <strong>Client:</strong>
+  <%= @contract.client %>
+</p>
+ 
+<p>
+  <strong>Opportunity:</strong>
+  <%= @contract.opportunity_link %>
+</p>
+
+<%= link_to 'Edit', edit_contract_path(@contract) %>
+<%= link_to 'Back', contracts_path %>
