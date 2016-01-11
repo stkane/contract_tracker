@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  contract_id: 
+  description: MyText
+  product1: false
+  product2: false
+  product3: false
+
+two:
+  contract_id: 
+  description: MyText
+  product1: false
+  product2: false
+  product3: false

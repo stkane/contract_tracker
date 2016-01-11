@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160108005120) do
+ActiveRecord::Schema.define(version: 20160111150506) do
 
   create_table "contracts", force: :cascade do |t|
     t.string   "client"
@@ -21,5 +21,17 @@ ActiveRecord::Schema.define(version: 20160108005120) do
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
   end
+
+  create_table "statement_of_works", force: :cascade do |t|
+    t.integer  "contract_id"
+    t.text     "description"
+    t.boolean  "product1"
+    t.boolean  "product2"
+    t.boolean  "product3"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "statement_of_works", ["contract_id"], name: "index_statement_of_works_on_contract_id"
 
 end
