@@ -8,5 +8,44 @@
   <%= @contract.opportunity_link %>
 </p>
 
+<h2>Statements of Work</h2>
+<% @contract.statement_of_works.each do |statement_of_work| %>
+  <p>
+    <strong>Statement of Work:</strong>
+    <%= statement_of_work.description %>
+  </p>
+ 
+  <p>
+    <strong>Products</strong>
+    <%= statement_of_work.product1 %>
+    <%= statement_of_work.product2 %>
+    <%= statement_of_work.product3 %>
+  </p>
+<% end %>
+
+<h2>Add a Statement of Work:</h2>
+<%= form_for([@contract, @contract.statement_of_works.build]) do |f| %>
+  <p>
+    <%= f.label :description %><br>
+    <%= f.text_field :description %>
+  </p>
+  <p>
+    <%= f.label :product1 %><br>
+    <%= f.check_box :product1 %>
+  </p>
+  <p>
+    <%= f.label :product2 %><br>
+    <%= f.check_box :product2 %>
+  </p>
+    <p>
+    <%= f.label :product3 %><br>
+    <%= f.check_box :product3 %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+
+
 <%= link_to 'Edit', edit_contract_path(@contract) %>
 <%= link_to 'Back', contracts_path %>
