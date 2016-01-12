@@ -9,8 +9,20 @@
        <p class="notice"><%= notice %></p>
        <p class="alert"><%= alert %></p>
 <body>
-
-<%= yield %>
+	<div class="navbar navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<a href="#" class="brand"> Contract Tracker</a>
+				<ul class="nav">
+					<li><%= link_to "All Contracts", contracts_path %> </li>
+				</ul>
+			</div>
+		</div>
+	</div>		
+	
+	<div class="container">
+		<%= yield %>
+	</div>
 
 </body>
 </html>
