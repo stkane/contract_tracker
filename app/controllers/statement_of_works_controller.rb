@@ -5,6 +5,10 @@ class StatementOfWorksController < ApplicationController
 		redirect_to contract_path(@contract)
 	end
 
+	def new
+
+	end
+
 	private
 		def statement_of_work_params
 			params.require(:statement_of_work).permit(:description, :product1, :product2, :product3)

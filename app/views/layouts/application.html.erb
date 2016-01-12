@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Blog</title>
+  <title>Contract Tracker</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -12,9 +12,20 @@
 	<div class="navbar navbar-fixed-top">
 		<div class="navbar-inner">
 			<div class="container">
-				<a href="#" class="brand"> Contract Tracker</a>
+				<li class="brand"> <%= link_to "Contract Tracker", welcome_index_path %></li>
 				<ul class="nav">
 					<li><%= link_to "All Contracts", contracts_path %> </li>
+				</ul>
+				<ul class="nav pull-right">
+					<% if user_signed_in? %>
+					<li><%= link_to current_user.email, edit_user_registration_path	%></li>
+					<li><%= link_to "Log Out", destroy_user_session_path, method: :delete %> </li>
+
+					<% else %>
+						<li><%= link_to "Register", new_user_registration_path %> </li> 
+						<li><%= link_to "Login", new_user_session_path %> </li> 	
+					<% end %>
+
 				</ul>
 			</div>
 		</div>

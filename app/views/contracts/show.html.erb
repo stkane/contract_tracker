@@ -16,29 +16,30 @@
   </p>
  
   <p>
-    <strong>Products</strong>
-    <%= statement_of_work.product1 %>
-    <%= statement_of_work.product2 %>
-    <%= statement_of_work.product3 %>
+    <li>Product One: <%= statement_of_work.product1 %></li>
+    <li>Product Two: <%= statement_of_work.product2 %></li>
+    <li>Product Three: <%= statement_of_work.product3 %></li>
   </p>
 <% end %>
 
-<h2>Add a Statement of Work:</h2>
+<br></br>
+
+<h3>Add a Statement of Work:</h3>
 <%= form_for([@contract, @contract.statement_of_works.build]) do |f| %>
   <p>
     <%= f.label :description %><br>
     <%= f.text_field :description %>
   </p>
   <p>
-    <%= f.label :product1 %><br>
+    <%= f.label :product1 %>
     <%= f.check_box :product1 %>
   </p>
   <p>
-    <%= f.label :product2 %><br>
+    <%= f.label :product2 %> 
     <%= f.check_box :product2 %>
   </p>
     <p>
-    <%= f.label :product3 %><br>
+    <%= f.label :product3 %>
     <%= f.check_box :product3 %>
   </p>
   <p>
