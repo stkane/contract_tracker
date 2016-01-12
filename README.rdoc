@@ -1,28 +1,20 @@
-== README
+== Contract Tracker README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Ah, contracts and the people who write them. While contract writers are generally regarded as demi-gods and mega celebrities in American society, they haven't always had much help in the way of software.
 
-Things you may want to cover:
+UNTIL NOW.
 
-* Ruby version
+This initial version of contract tracker allows those who write contracts to keep track of commitments made in an easy format. 
 
-* System dependencies
+The following functionality is included in this version 1.0:
 
-* Configuration
+* User accounts! Create them, edit them, log out, and log in. Logging in is probably the most important of those options. You can't really do anything without logging in.
 
-* Database creation
+* Contract Tracker uses the devise gem to verify user accounts.
 
-* Database initialization
+* Bootstrap! A little bit of javascript! Watch the Contracts turn slighly grey when you hover over them! Scintillating!
 
-* How to run the test suite
+* Validation! Enter an invalid date? Get lost! Contract Tracker knows there aren't 31 days in September.
 
-* Services (job queues, cache servers, search engines, etc.)
+* Associations! Statements of work belong to Contracts. Contracts can have many statements of work.
 
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
